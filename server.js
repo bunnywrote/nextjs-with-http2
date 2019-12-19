@@ -11,8 +11,8 @@ const app = next({ dev })
 // Create the secure HTTPS server:
 // Don't forget to create the keys for your development
 const server = http2.createSecureServer({
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
+  key: fs.readFileSync('localhost-privkey.pem'),
+  cert: fs.readFileSync('localhost-cert.pem'),
 })
 
 app.prepare().then(() => {
